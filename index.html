@@ -466,7 +466,9 @@
       <h2 class="section-title">Let's build something together.</h2>
       <p class="section-sub">Tell us about your business and what you want to achieve. We'll come back to you within 4 hours.</p>
     </div>
-    <form class="contact-grid" id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+    <form class="contact-grid" id="contact-form">
+      <input type="hidden" name="access_key" value="cbb7ad05-83f2-453a-b867-54700863b2aa">
+      <input type="hidden" name="subject" value="New Lead from SaptaAI Website">
       <div class="field-wrap">
         <label for="fname">First Name</label>
         <input class="field-input" type="text" id="fname" name="fname" autocomplete="given-name" required>

@@ -393,51 +393,46 @@ document.querySelectorAll('.field-input').forEach(inp => {
 /* ══════════════════════════════════════════════
    CONTACT FORM SUBMIT
 ══════════════════════════════════════════════ */
-function handleSubmit(e) {
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const btn    = e.target.querySelector('.contact-submit');
-  const fname  = document.getElementById('fname').value.trim();
-  const email  = document.getElementById('email').value.trim();
-  const service = document.getElementById('service').value;
+  const btn = form.querySelector(".contact-submit");
 
-  // Basic validation
-  if (!fname) {
-    showFormError('Please enter your first name.');
-    return;
-  }
-  if (!email || !email.includes('@')) {
-    showFormError('Please enter a valid email address.');
-    return;
-  }
-
-  // Submission state
-  btn.textContent = 'Sending…';
-  btn.style.opacity = '.65';
+  btn.textContent = "Sending...";
   btn.disabled = true;
 
-  // Simulate submission — replace with your actual endpoint/EmailJS/Formspree
-  setTimeout(() => {
-    btn.textContent       = '✓ Message Sent!';
-    btn.style.background  = 'linear-gradient(135deg,#34d399,#059669)';
-    btn.style.boxShadow   = '0 0 40px rgba(52,211,153,.4)';
-    btn.style.opacity     = '1';
-    btn.disabled          = false;
+  const formData = new FormData(form);
 
-    e.target.reset();
-    document.querySelectorAll('.field-wrap').forEach(w => {
-      w.classList.remove('filled', 'active');
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
 
-    // Reset button after 5 seconds
-    setTimeout(() => {
-      btn.textContent      = 'Send Message →';
-      btn.style.background = '';
-      btn.style.boxShadow  = '';
-    }, 5000);
+    const result = await response.json();
 
-  }, 1400);
-}
+    if (result.success) {
+      btn.textContent = "✓ Message Sent!";
+
+      form.reset();
+
+      setTimeout(() => {
+        btn.textContent = "Send Message →";
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      btn.textContent = "Try Again";
+      btn.disabled = false;
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    btn.textContent = "Try Again";
+    btn.disabled = false;
+    alert("Network error. Please try again.");
+  }
+});
 
 function showFormError(msg) {
   // Remove any existing error
