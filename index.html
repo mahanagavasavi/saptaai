@@ -52,7 +52,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/favicon.png">
 
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -132,9 +131,14 @@
       </p>
 
       <div class="hero-actions" id="ha">
-        <a href="https://wa.me/918074916835?text=Hi%20SaptaAI,%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn-primary">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book Free Consultation
-        </a>
+        <a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdBCabWU0wMN88w9WS_v2fmv7TtBflKn7VhbUu-mApXB0I64w/viewform?usp=dialog"
+target="_blank"
+rel="noopener"
+class="btn-primary">
+<i class="fa-solid fa-paper-plane"></i>
+Request a Service
+</a>
         <a href="#services" class="btn-ghost">
           See What We Do
         </a>
@@ -466,53 +470,53 @@
     <div class="sh">
       <div class="section-tag">Get In Touch</div>
       <h2 class="section-title">Let's build something together.</h2>
-      <p class="section-sub">Tell us about your business and what you want to achieve. We'll come back to you within 4 hours.</p>
+      <p class="section-sub">
+        Click below to submit your project requirements.
+        Our team will review your request and send you a confirmation email with a unique request ID.
+      </p>
     </div>
-    <form class="contact-grid" id="contact-form">
-      <input type="hidden" name="access_key" value="cbb7ad05-83f2-453a-b867-54700863b2aa">
-      <input type="hidden" name="subject" value="New Lead from SaptaAI Website">
-      <div class="field-wrap">
-        <label for="fname">First Name</label>
-        <input class="field-input" type="text" id="fname" name="fname" autocomplete="given-name" required>
-      </div>
-      <div class="field-wrap">
-        <label for="lname">Last Name</label>
-        <input class="field-input" type="text" id="lname" name="lname" autocomplete="family-name">
-      </div>
-      <div class="field-wrap full">
-        <label for="email">Email Address</label>
-        <input class="field-input" type="email" id="email" name="email" autocomplete="email" required>
-      </div>
-      <div class="field-wrap full">
-        <label for="phone">WhatsApp / Phone (optional)</label>
-        <input class="field-input" type="tel" id="phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="field-wrap full">
-        <label for="service" class="service-label">What can we help you with?</label>
-        <select class="field-input field-select" id="service" name="service">
-          <option value="" disabled selected>Select a service…</option>
-          <option value="ai-automation">AI Automation</option>
-          <option value="website-dev">Website Development</option>
-          <option value="digital-marketing">Digital Marketing</option>
-          <option value="lead-gen">Lead Generation System</option>
-          <option value="process-automation">Business Process Automation</option>
-          <option value="content-social">Content &amp; Social Media</option>
-          <option value="other">Other / Not Sure Yet</option>
-        </select>
-      </div>
-      <div class="field-wrap is-area full">
-        <label for="message">Tell us about your project</label>
-        <textarea class="field-input" id="message" name="message" placeholder=" "></textarea>
-      </div>
-      <div class="full contact-trust" role="list">
-        <span role="listitem"><i class="fa-solid fa-bolt" aria-hidden="true"></i> We reply within 4 hours</span>
-        <span role="listitem"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your info is never shared</span>
-        <span role="listitem"><i class="fa-solid fa-check" aria-hidden="true"></i> No commitment required</span>
-      </div>
-      <div class="full">
-        <button type="submit" class="contact-submit" data-magnetic>Send Message →</button>
-      </div>
-    </form>
+    <div class="request-service-box">
+
+  <div class="contact-trust" role="list">
+    <span role="listitem">
+      <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+      We reply within 4 hours
+    </span>
+
+    <span role="listitem">
+      <i class="fa-solid fa-lock" aria-hidden="true"></i>
+      Your information is secure
+    </span>
+
+    <span role="listitem">
+      <i class="fa-solid fa-check" aria-hidden="true"></i>
+      No commitment required
+    </span>
+  </div>
+
+  <div style="text-align:center;padding:40px 20px;">
+
+    <h3 style="margin-bottom:15px;">
+      Submit Your Project Request
+    </h3>
+
+    <p style="margin-bottom:25px;color:var(--text-muted);">
+      Tell us about your requirements through our service request form.
+      Once submitted, our team will review your request and contact you shortly.
+    </p>
+
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdBCabWU0wMN88w9WS_v2fmv7TtBflKn7VhbUu-mApXB0I64w/viewform?usp=dialog"
+      target="_blank"
+      rel="noopener"
+      class="contact-submit"
+    >
+      Request Service →
+    </a>
+
+  </div>
+
+</div>
     <div class="cinfo" role="list">
       <div class="cinfo-item" role="listitem"><span class="cinfo-dot" aria-hidden="true"></span>saptaai07@gmail.com</div>
       <div class="cinfo-item" role="listitem"><span class="cinfo-dot" aria-hidden="true"></span>Hyderabad, India</div>
@@ -538,9 +542,6 @@
       <p class="footer-tagline">AI Automation &amp; Digital Solutions<br>for businesses that want to grow.</p>
       <div class="footer-social" role="list" aria-label="Social media links">
         <a href="https://www.instagram.com/saptaai.in/" target="_blank" rel="noopener" aria-label="SaptaAI on Instagram" role="listitem"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-         <a href="https://www.linkedin.com/company/sapta-ai/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-        </a>
         <a href="https://wa.me/918074916835" target="_blank" rel="noopener" aria-label="SaptaAI on WhatsApp" role="listitem"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
       </div>
     </div>
